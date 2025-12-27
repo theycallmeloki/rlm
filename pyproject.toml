@@ -1,7 +1,10 @@
 [project]
 name = "rlm"
+authors = [
+    {name = "Alex Zhang", email = "altzhang@mit.edu"},
+]
 version = "0.1.0"
-description = "A simple framework for running Recursive Language Models."
+description = "Recursive Language Models."
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
