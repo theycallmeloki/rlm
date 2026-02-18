@@ -1,0 +1,18 @@
+apiVersion: rlm.io/v1alpha1
+kind: RLMJob
+metadata:
+  name: math-solver
+spec:
+  prompt: "What is the integral of x^2 * sin(x) dx?"
+  backend: openai
+  backendKwargs:
+    model_name: gpt-4o
+  backendSecret: openai-api-key
+  numWorkers: 1
+  maxIterations: 30
+  maxDepth: 1
+  timeout: 600
+---
+# Example Secret (create before applying the RLMJob):
+# kubectl create secret generic openai-api-key \
+#   --from-literal=OPENAI_API_KEY=sk-...
